@@ -18,3 +18,38 @@ body {
   max-width: 420px;
   margin: 1em;
 }
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  margin: 0.5;
+  margin: 0.5em;
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+  outline: none;
+  background-color: #7c7c7c2b;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-size: 120%;
+}
+
+input.search_bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background-color: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 108%;
+  width: calc(100% - 100px);
+}
+button:hover {
+  background: #7c7c7c6b;
+}
+h1 .temp {
+  margin: 0;
+}
