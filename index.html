@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -21,11 +21,17 @@
           <img src="https://img.icons8.com/fluent/25/000000/search.png" />
         </button>
       </div>
-      <div class="weather">
-        <h2 class="city">Weather in Giridih</h2>
+      <div class="weather loading">
+        <h2 class="city">Weather in New Delhi</h2>
         <h1 class="temp">51°C</h1>
-        <img src="" alt="" class="icon" />
-        <div class="description">Cloudy</div>
+        <div class="flex">
+          <img
+            src="http://openweathermap.org/img/w/10d.png"
+            alt=""
+            class="icon"
+          />
+          <div class="description">Cloudy</div>
+        </div>
         <div class="humitity">Humitity: 60%</div>
         <div class="wind">Wind Speed: 7.2 km/h</div>
       </div>

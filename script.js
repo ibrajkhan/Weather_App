@@ -16,5 +16,28 @@ let weather = {
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
     console.log(name, description, icon, temp, humidity, speed);
+    document.querySelector(".city").innerText = "Weather in " + name;
+    document.querySelector(".temp").innerText = temp + " °C";
+    document.querySelector(".icon").src =
+      "http://openweathermap.org/img/w/" + icon + ".png";
+    document.querySelector(".description").innerText = description;
+    document.querySelector(".humitity").innerText = document.querySelector(
+      ".humitity"
+    ).innerText = "Humidity: " + humidity + "%";
+    document.querySelector(".wind").innerText =
+      "Wind Speed: " + speed + " km/h";
+    document.querySelector(".weather").classList.remove("loading");
+  },
+  search: function () {
+    this.fetchWeather(document.querySelector(".search_bar").value);
   },
 };
+document.querySelector(".search button").addEventListener("click", function () {
+  weather.search();
+});
+document.querySelector(".search_bar").addEventListener("keyup", function (e) {
+  if (e.key == "Enter") {
+    weather.search();
+  }
+});
+weather.fetchWeather("New Delhi");
